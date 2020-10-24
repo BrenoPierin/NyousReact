@@ -4,7 +4,7 @@ const Rodape = () => {
     return(
         <footer className="text-center" style={{marginTop : '70px'}}>
             <h1>SENAI Informática</h1>
-            <small>Desenvolvido por <strong>Gabriel Hitoshi</strong></small>
+            <small>Desenvolvido por <strong>Breno Pierin</strong></small>
         </footer>
     );
 }

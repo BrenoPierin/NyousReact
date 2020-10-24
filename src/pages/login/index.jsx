@@ -41,6 +41,12 @@ const Login = () => {
             localStorage.setItem('token-nyous', data.token);
             
             let usuario = jwt_decode(data.token);
+
+            if(usuario.role === 'adm'){
+                history.push('/admin/dashboard')
+            }else{
+                history.push('/eventos')
+            }
             
             console.log(usuario);
 
