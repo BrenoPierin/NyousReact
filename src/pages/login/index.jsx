@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
-// import URL from '../utils/constants';
 import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
 import logo from '../../assets/img/logo.png'
 import { Form, Container, Button } from 'react-bootstrap';
 import './index.css';
+import {url} from '../../utils/constants'
 
 
 const Login = () => {
@@ -21,7 +21,7 @@ const Login = () => {
     
         console.log(` ${email} - ${senha} `)
     
-        fetch( 'http://localhost:63496/api/login' ,{
+        fetch( url + '/login' ,{
             method : 'POST',
             body : JSON.stringify({
                 email : email,
